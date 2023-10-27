@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <p class="description">Shorten your long URLs quickly and easily.</p>
+        <form id="shorten-form" action="/short" method="post">
+            <label for="original-url">Original URL:</label>
+            <input type="text" id="full-url" placeholder="Enter your URL" name="origUrl">
+            <button type="button" id="shorten-button" type="submit" onclick="createNewShortUrl()">Shorten</button>
+        </form>
+        <div class="result">
+            <p><strong>Full URL:</strong> <span id="original-url"></span></p>
+            <p><strong>Short URL:</strong> <span ><a target="_blank" id="short-url"></a></span></p>
+        </div>
+    </div>
+    <script>
+        const shortenForm = document.getElementById('shorten-form');
+        const originalUrlInput = document.getElementById('full-url');
+        const shortenButton = document.getElementById('shorten-button');
+        const fullUrlElement = document.getElementById('original-url');
+        const shortUrlElement = document.getElementById('short-url');
+        const clicksElement = document.getElementById('clicks');
+
+        shortenButton.addEventListener('click', () => {
+            const originalUrl = originalUrlInput.value;
+
+            // Here, you can implement your URL shortening logic using a service or custom code.
+            // For this example, we'll just display the original URL in the result section.
+
+            fullUrlElement.textContent = originalUrl;
+            
+        });
+    </script>
+    <script src="./scripts/createShortUrl.js"></script>
+</body>
+</html>
