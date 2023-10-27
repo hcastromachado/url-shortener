@@ -1,13 +1,32 @@
-# Url Shortener 🔗
-> A fullstack url shortener built with NodeJS, MongoDB & Express
+# URL Shortener
 
-This application can create a short url for you and store it in a MongoDB database, so you can create and access them whenever you want. 
+URL Shortener is a simple web application that allows you to shorten long URLs, making them easier to share. This project is built using NodeJS, MongoDB and Express, and it provides a user-friendly interface for generating and managing short links.
 
-With two steps (paste url and click the button) you can use a shortened link to share with someone. 
+![Screenshot](Url.png)
 
-## Instalation and setup
+## Features
 
-```sh
-npm install my-crazy-module --save
-```
+- Shorten long URLs with a single click.
+- Customizable short URLs for easy sharing.
 
+## Getting Started
+
+### Prerequisites
+
+- Install NodeJs
+- Install Express
+- Create a MongoDB account
+- Create a cluster on MongoDB
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/hcastromachado/url-shortener.git
+
+
+2. Run the command
+
+   ```bash
+   yarn install
